@@ -1,0 +1,231 @@
+body{
+    margin: 0;
+    padding: 0;
+ }
+ #section_top{
+        background-color: #D1C3A9;
+        width: 100%;
+        position:absolute;
+        min-height: 500px;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center;*/
+    } 
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* padding: 10px 15px; */
+        padding-top: 10px;
+        padding-bottom: 10px ;
+        max-height: 50px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        background-color: #fff;
+    }
+    header .logo{
+        position: relative;
+        max-width: 50px;
+        border: 1px solid #000;
+        margin-left: 10px;
+        border-radius: 30px;
+    }
+    header #navbar{
+        position: relative;
+        display: flex;
+        margin-right: 70px;
+    }
+    header #navbar li{
+        margin-right: 10px;
+        display: inline-block;
+        color: #000;
+        font-weight: 500;
+        margin-left: 40px;
+    }
+
+    #navbar li a{
+        color: #000;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+    }
+    #navbar li a:hover{
+        border-bottom: 2px solid #000;
+
+    }
+
+    #section_top_middle{
+        margin-left: 110px;
+    }
+    
+    .text {
+        color: #000000;
+        text-transform: capitalize;
+        float:left;
+    }
+    .text h3 {
+        font-size: 50px;
+        font-family:'Lucida Calligraphy', Century, serif;
+        padding-top: 150px;
+    }
+
+    #banner {
+        max-width: 510px;
+        float: right;
+    }
+
+    #section_middle{
+        background-color: #fff8e7;
+        flex-direction: column;
+        padding-top: 50vh;
+        display: flex;
+        /* float: left; */
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    #section_middle h5{
+        margin-top: 6vh;
+        margin-left: 60pc;
+        font-size: 3pc;
+    }
+    
+    .product_img{
+        width: 25pc;
+        height: 25pc;
+        padding: 4pc;
+        margin-top: -3pc;
+        border-radius: 100px;
+        margin-left: 10%;
+        transition: transform 0.5s ease;
+    }
+    .product_img:hover{
+        transform: scale(1,1);
+    }
+
+    .image_Product{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .image-info{
+        margin-left: 10%;
+    }
+
+    .title {
+        font-size: 40px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 0;
+        /* float:right; */
+        margin-top: -100px;
+        margin-bottom: 30px;
+      }
+      
+      .comment {
+        margin: 0;
+        font-size: 22px;
+        color: #666;
+      }
+
+    .hover-box {
+    position: absolute;
+    display: flex;
+    margin-top: -8%;
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 35pc;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    }   
+
+    .image_Product:hover .hover-box{
+        opacity: 1;
+
+    }
+
+    #section_quarter_bottom {
+        display: flex;
+        background-color: #ffff;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    #section_quarter_bottom p {
+        color: #333;
+        text-align: left;
+        font-family: Cambria;
+        font-size: 25px;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+    #section_quarter_bottom h1 {
+        margin-left: 100px;
+        text-align: left;
+        font-size: 50px;
+    }
+
+    #section_quarter_bottom img {
+        border-radius: 20px;
+        margin-right: -1700px;
+        margin-top: -300px;
+    }
+
+#section_bottom {
+    background-color: #fff8e7;
+    color: #000000;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+#profil_insta {
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+#profil_insta h3 {
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+#order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon {
+    background-color: transparent;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.num {
+    font-size: 20px;
+}
+
+.num a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.num a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+.container {
+    margin-top: 60px;
+    font-size: 20px;
+}
