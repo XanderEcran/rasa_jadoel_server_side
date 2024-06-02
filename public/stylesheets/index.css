@@ -1,136 +1,115 @@
-body{
+body {
     margin: 0;
     padding: 0;
- }
- #section_top{
-        background-color: #D1C3A9;
-        width: 100%;
-        position:absolute;
-        min-height: 500px;
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center;*/
-    } 
-    header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        /* padding: 10px 15px; */
-        padding-top: 10px;
-        padding-bottom: 10px ;
-        max-height: 50px;
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        background-color: #fff;
-    }
-    header .logo{
-        position: relative;
-        max-width: 50px;
-        border: 1px solid #000;
-        margin-left: 10px;
-        border-radius: 30px;
-    }
-    header #navbar{
-        position: relative;
-        display: flex;
-        margin-right: 70px;
-    }
-    header #navbar li{
-        margin-right: 10px;
-        display: inline-block;
-        color: #000;
-        font-weight: 500;
-        margin-left: 40px;
-    }
-
-    #navbar li a{
-        color: #000;
-        text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: all 0.3s ease-in-out;
-
-    }
-    #navbar li a:hover{
-        border-bottom: 2px solid #000;
-
-    }
-
-    #section_top_middle{
-        margin-left: 110px;
-    }
-    
-    .text {
-        color: #000000;
-        text-transform: capitalize;
-        float:left;
-    }
-    .text h3 {
-        font-size: 50px;
-        font-family:'Lucida Calligraphy', Century, serif;
-        padding-top: 150px;
-    }
-
-    #banner {
-        max-width: 510px;
-        float: right;
-    }
-
-    #section_middle{
-        background-color: #fff8e7;
-        flex-direction: column;
-        padding-top: 50vh;
-        display: flex;
-        /* float: left; */
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    
-    #section_middle h5{
-        margin-top: 6vh;
-        margin-left: 60pc;
-        font-size: 3pc;
-    }
-    
-    .product_img{
-        width: 25pc;
-        height: 25pc;
-        padding: 4pc;
-        margin-top: -3pc;
-        border-radius: 100px;
-        margin-left: 10%;
-        transition: transform 0.5s ease;
-    }
-    .product_img:hover{
-        transform: scale(1,1);
-    }
-
-    .image_Product{
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .image-info{
-        margin-left: 10%;
-    }
-
-    .title {
-        font-size: 40px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        margin: 0;
-        /* float:right; */
-        margin-top: -100px;
-        margin-bottom: 30px;
-      }
-      
-      .comment {
-        margin: 0;
-        font-size: 22px;
-        color: #666;
-      }
-
-    .hover-box {
+}
+#section_top {
+    background-color: #D1C3A9;
+    width: 100%;
+    position: relative;
+    min-height: 500px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+header .logo {
+    max-width: 50px;
+    border: 1px solid #000;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+header #navbar {
+    display: flex;
+    margin-right: 70px;
+}
+header #navbar li {
+    margin-right: 10px;
+    display: inline-block;
+    color: #000;
+    font-weight: 500;
+    margin-left: 40px;
+}
+#navbar li a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+#navbar li a:hover {
+    border-bottom: 2px solid #000;
+}
+#section_top_middle {
+    margin-left: 110px;
+}
+.text {
+    color: #000;
+    text-transform: capitalize;
+    float: left;
+}
+.text h3 {
+    font-size: 50px;
+    font-family: 'Lucida Calligraphy', Century, serif;
+    padding-top: 150px;
+}
+#banner {
+    max-width: 510px;
+    float: right;
+}
+#section_middle {
+    background-color: #fff8e7;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50vh;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#section_middle h5 {
+    margin-top: 6vh;
+    margin-left: 60pc;
+    font-size: 3pc;
+}
+.product_img {
+    width: 25pc;
+    height: 25pc;
+    padding: 4pc;
+    margin-top: -3pc;
+    border-radius: 100px;
+    margin-left: 10%;
+    transition: transform 0.5s ease;
+}
+.product_img:hover {
+    transform: scale(1, 1);
+}
+.image_Product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.image-info {
+    margin-left: 10%;
+}
+.title {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    margin-top: -100px;
+    margin-bottom: 30px;
+}
+.comment {
+    margin: 0;
+    font-size: 22px;
+    color: #666;
+}
+.hover-box {
     position: absolute;
     display: flex;
     margin-top: -8%;
@@ -144,40 +123,34 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.5s ease;
-    }   
-
-    .image_Product:hover .hover-box{
-        opacity: 1;
-
-    }
-
-    #section_quarter_bottom {
-        display: flex;
-        background-color: #ffff;
-        padding: 100px 0;
-        text-align: center;
-    }
-    
-    #section_quarter_bottom p {
-        color: #333;
-        text-align: left;
-        font-family: Cambria;
-        font-size: 25px;
-        margin-top: 50px;
-        margin-left: 100px;
-    }
-    #section_quarter_bottom h1 {
-        margin-left: 100px;
-        text-align: left;
-        font-size: 50px;
-    }
-
-    #section_quarter_bottom img {
-        border-radius: 20px;
-        margin-right: -1700px;
-        margin-top: -300px;
-    }
-
+}
+.image_Product:hover .hover-box {
+    opacity: 1;
+}
+#section_quarter_bottom {
+    display: flex;
+    background-color: #ffff;
+    padding: 100px 0;
+    text-align: center;
+}
+#section_quarter_bottom p {
+    color: #333;
+    text-align: left;
+    font-family: Cambria;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+#section_quarter_bottom h1 {
+    margin-left: 100px;
+    text-align: left;
+    font-size: 50px;
+}
+#section_quarter_bottom img {
+    border-radius: 20px;
+    margin-right: -1700px;
+    margin-top: -300px;
+}
 #section_bottom {
     background-color: #fff8e7;
     color: #000000;
@@ -185,34 +158,28 @@ body{
     text-align: center;
     font-size: 25px;
 }
-
 #profil_insta {
     margin-bottom: 50px;
     font-size: 25px;
 }
-
 #profil_insta h3 {
     color: #000000;
     margin-bottom: 25px;
 }
-
 #order {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-
 .icon {
     background-color: transparent;
     width: 40px;
     margin-right: 10px;
 }
-
 .num {
     font-size: 20px;
 }
-
 .num a {
     color: #000000;
     text-decoration: none;
@@ -220,7 +187,6 @@ body{
     font-size: 20px;
     transition: color 0.3s ease;
 }
-
 .num a:hover {
     color: #ff4500;
     text-decoration: underline;
@@ -228,4 +194,147 @@ body{
 .container {
     margin-top: 60px;
     font-size: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 2560px) and (min-width: 1921px) {
+    .text h3 {
+        font-size: 3.5rem;
+        padding-top: 200px;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .comment {
+        font-size: 1.5rem;
+    }
+    .hover-box {
+        padding: 30px;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 1600px) {
+    .text h3 {
+        font-size: 3rem;
+        padding-top: 150px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .comment {
+        font-size: 1.25rem;
+    }
+    .hover-box {
+        padding: 25px;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 1281px) {
+    .text h3 {
+        font-size: 2.5rem;
+        padding-top: 100px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .comment {
+        font-size: 1.1rem;
+    }
+    .hover-box {
+        padding: 20px;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #navbar {
+        flex-direction: column;
+        margin-right: 0;
+    }
+    #navbar li {
+        margin: 10px 0;
+    }
+    .text h3 {
+        font-size: 2rem;
+        padding-top: 80px;
+    }
+    .title {
+        font-size: 1.75rem;
+    }
+    .product_img {
+        width: 100%;
+        max-width: 20rem;
+    }
+    #section_middle h5 {
+        font-size: 1.25rem;
+        margin-left: 0;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 1.25rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    header {
+        padding: 5px 10px;
+    }
+    .text h3 {
+        font-size: 1.75rem;
+        padding-top: 60px;
+    }
+    .title {
+        font-size: 1.5rem;
+        margin-top: -30px;
+    }
+    .product_img {
+        width: 100%;
+        max-width: 15rem;
+    }
+    #section_middle h5 {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 1.25rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px 10px;
+    }
+    .text h3 {
+        font-size: 1.5rem;
+        padding-top: 50px;
+    }
+    .title {
+        font-size: 1.5rem;
+        margin-top: -30px;
+    }
+    .product_img {
+        width: 100%;
+        max-width: 10rem;
+    }
+    #section_middle h5 {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    #section_quarter_bottom p, #section_quarter_bottom h1 {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
 }
