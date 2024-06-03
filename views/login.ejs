@@ -6,18 +6,31 @@
   <link rel="stylesheet" type="text/css" href="/stylsheets/login.css">
 </head>
 <body>
-  <h1>Login</h1>
-  <form action="/login" method="POST">
-    <div>
-      <label for="email_user">Email:</label>
-      <input type="email" name="email_user" required>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+      Login
+      </div>
+      <div class="card-body">
+        <form action="/auth/login" method="GET">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Login User</button>
+            <button type="button" class="btn btn-primary"><a href="/register" style="color: white; text-decoration: none;">Register</a></button>
+        </form>
+      </div>
     </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password" required>
-    </div>
-    <button type="submit">Login</button>
-    <a href="/register">Register</a>
-  </form>
+  </div>
 </body>
 </html>
