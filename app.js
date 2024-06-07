@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dotenv = require('dotenv');
 let mysql = require('mysql');
+var session = require('express-session');
 
 dotenv.config({ path: './.env'})
 
@@ -29,6 +30,13 @@ connection.connect( (error) => {
 // const indexRouter = require('./routes/index');
 // const loginRouter = require('./routes/login');
 // const registerRouter = require('./routes/register');
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Set secure: true in production when using HTTPS
+}));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
