@@ -14,7 +14,6 @@ const isAuthenticated = (req, res, next) => {
     res.redirect('/login');
 };
 
-// Protect your dashboard route
 router.get('/index', isAuthenticated, (req, res) => {
     res.render('index', { message: 'Welcome back!', username: req.session.username });
 });

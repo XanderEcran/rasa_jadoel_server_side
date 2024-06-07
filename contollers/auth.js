@@ -54,7 +54,6 @@ exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        // Check if email exists in the database
         connection.query('SELECT * FROM users WHERE email = ?', [email], async (error, results) => {
             if (error) {
                 console.log(error);
@@ -71,7 +70,6 @@ exports.login = async (req, res) => {
 
             const user = results[0];
 
-            // Compare the provided password with the hashed password
             const isMatch = await bcrypt.compare(password, user.password);
 
             if (!isMatch) {
@@ -79,10 +77,7 @@ exports.login = async (req, res) => {
                     message: 'Email or password is incorrect'
                 });
             }
-
-            // Successful login
-            // Set session or token here if you are using session-based or token-based authentication
-            // req.session.userId = user.id; // For session-based auth
+            // req.session.userId = user.id;
             return res.status(200).render('index', {
                 message: 'Logged in successfully'
             });
@@ -110,7 +105,7 @@ exports.logout = (req, res) => {
                 message: 'Failed to log out'
             });
         }
-        res.clearCookie('connect.sid'); // This name might be different based on your session cookie name
-        return res.status(200).redirect('/login'); // Redirect to the login page or homepage
+        res.clearCookie('connect.sid');
+        return res.status(200).redirect('/login');
     });
 };
