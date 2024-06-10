@@ -71,6 +71,7 @@ header #navbar li a:hover {
 .text {
     color: #000000;
     text-transform: capitalize;
+    margin-left: 50px;
     max-width: 50%;
 }
 
@@ -80,7 +81,7 @@ header #navbar li a:hover {
 }
 
 #banner {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -161,7 +162,7 @@ header #navbar li a:hover {
 
 #section_quarter_bottom {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     background-color: #ffff;
     padding: 100px 0;
     text-align: center;
