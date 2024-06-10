@@ -35,7 +35,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false } // Set secure: true in production when using HTTPS
+  cookie: { secure: true } // Set secure: true in production when using HTTPS
 }));
 
 app.set('views', path.join(__dirname, 'views'));

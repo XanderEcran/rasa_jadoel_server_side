@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,15 @@
 <body>
     <div id="section_top" class="home">
         <header>
-        <a href="/login"><img src="/images/WhatsApp Image 2024-04-01 at 19.00.21_ac7de810.jpg" class="logo" id="logo"></a>
+        <img src="/images/WhatsApp Image 2024-04-01 at 19.00.21_ac7de810.jpg" class="logo" id="logo">
         <ui id="navbar">
             <li><a href=".home">Home</a></li>
             <li><a href=".product">Product</a></li>
             <li><a href=".about">About Us</a></li>
             <li><a href=".contact">Contact Us</a></li> 
+            <li><form action="/auth/logout" method="POST">
+                <button style="border:none; background: none; font-family:'Times New Roman', Times, serif; font-size: 16px;" type="submit">Logout</button>
+            </form></li>
         </ui>
     </header>
     <div id="section_top_middle">

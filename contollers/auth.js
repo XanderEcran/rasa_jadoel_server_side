@@ -10,91 +10,61 @@ let connection = mysql.createConnection({
    database:    process.env.DATABASE,
 });
 
-exports.register = (req, res) => {
-    console.log(req.body);
-
-    // const name = req.body.name;
-    // const email = req.body.email;
-    // const password = req.body.password;
-    // const passwordConfirm = req.body.passwordConfirm;
-
-    const { name, email, password, passwordConfirm } = req.body;
-
-    connection.query('SELECT email FROM users WHERE email = ?', [email], async (error, results) => {
-        if(error){
-            console.log(error);
-        }
-        if(results.length > 0){
-            return res.render('register', {
-                message: 'That email is already in use'
-            })
-        }else if(password !== passwordConfirm){
-            return res.render('register', {
-                message: 'The password do not match'
-            });
-        }
-
-        let hashedPassword = await bcrypt.hash(password, 8);
-        console.log(hashedPassword);
-
-        connection.query('INSERT INTO users SET ?', {username: name, email: email, password: hashedPassword}, (error, results) => {
-            if(error){
-                console.log(error);
-            }else{
-                return res.render('register', {
-                    message: 'User Registered'
-                });
-            }
-        })
-    });
-
-}
-
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
+        if (!email || !password) {
+            console.log('Email or password not provided');
+            return res.status(400).render('login', {
+                message: 'Please enter both email and password'
+            });
+        }
+
         connection.query('SELECT * FROM users WHERE email = ?', [email], async (error, results) => {
             if (error) {
-                console.log(error);
+                console.log('Database query error:', error);
                 return res.status(500).render('login', {
                     message: 'An error occurred while trying to log in'
+                    
                 });
             }
 
             if (results.length === 0) {
+                console.log('No user found with the provided email');
                 return res.status(400).render('login', {
                     message: 'Email or password is incorrect'
                 });
             }
 
-            const user = results[0];
+            const users = results[0];
 
-            const isMatch = await bcrypt.compare(password, user.password);
-
-            if (!isMatch) {
+            if (users.password !== password) {
+                console.log('Password does not match');
                 return res.status(400).render('login', {
                     message: 'Email or password is incorrect'
                 });
             }
-            // req.session.userId = user.id;
-            return res.status(200).render('index', {
+
+            req.session.users = {
+                id_user: users.id_user,
+                username: users.username,
+                email: users.email
+            };
+
+            console.log('User logged in successfully:', req.session.user);
+
+            return res.status(200).render('indexUser', {
                 message: 'Logged in successfully'
             });
         });
     } catch (error) {
-        console.log(error);
+        console.log('Unexpected error:', error);
         return res.status(500).render('login', {
             message: 'An error occurred while trying to log in'
         });
     }
-    // if (isMatch) {
-    //     const token = jwt.sign({ id: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
-    //     return res.status(200).json({
-    //         message: 'Logged in successfully',
-    //         token: token
-    //     });
-    // }
+    console.log(req.body);
 };
 
 exports.logout = (req, res) => {
