@@ -42,9 +42,9 @@ router.get('/', function (req, res, next) {
     connection.query('SELECT * FROM posts ORDER BY id DESC', function (err, rows) {
         if (err) {
             req.flash('error', err);
-            res.render('posts/index', { data: ''});
+            res.render('posts/index', {messages: req.flash(), data: ''});
         } else {
-            res.render('posts/index', { data: rows });
+            res.render('posts/index', {messages: req.flash(), data: rows });
         }
     });
 });

@@ -33,61 +33,34 @@
         </div>
     </div>
     <div id="section_middle" class="product">
-        <h5>Product</h5>
-        <div class="image_Product">
-            <img src="/images/Keripik Talas.jpg" class="product_img">
-            <div class="hover-box">
-                Bahan-bahan yang digunakan:<br>
-                1. Talas<br>
-                2. Kunyit<br>
-                3. Garam<br>
-                4. Penyedap Rasa<br>
-                5. Sahang/Lada<br>
-                6. Minyak Goreng
-            </div>
-            <div class="image-info">
-                <h3 class="title">Keripik Talas</h3>
-                <p class="comment">"Rasa renyah dan asin dari talas sangat cocok menjadi makanan ngemil anda"</p>
-            </div>
+        <h5>Product</h5> 
+        <% if(data.length){
+            for(var i = 0; i < data.length; i++) {%>  
+                <div class="image_Product">
+                        <img src="/uploads/<%= data[i].gambar_produk %>" alt="<%= data[i].gambar_produk %>" style="width: 130px; height: auto;">
+                        <div class="hover-box">
+                            <%= data[i].resep %>
+                        </div>
+                        <div class="image-info">
+                        <h3 class="title"><%= data[i].nama_produk %></h3>
+                        <p class="comment"><%= data[i].deskripsi %></p>
+                        </div>
+                </div>
+            <% }
+            
+        }else{ %>
+            <tr>
+                <td colspan="6">
+                    <div class="alert alert-danger" role="alert">
+                        Data tidak ditemukan!
+                    </div>
+                </td>
+            </tr>
+        <% } %>    
+           
         </div>
     
-        <div class="image_Product">
-            <img src="/images/Poeding.jpg" class="product_img">
-            <div class="hover-box">
-                Bahan-bahan yang digunakan:<br>
-                1. Agar-Agar<br>
-                2. Jelly<br>
-                3. Susu<br>
-                4. Coklat<br>
-                5. Gula<br>
-                6. Buah Lengkeng<br>
-                7. Air
-            </div>
-            <div class="image-info">
-                <h3 class="title">Poeding</h3>
-                <p class="comment">"Cocok sekali untuk acara-acara kebersamaan. Catatan: dinginkan di kulkas untuk<br> mendapatkan rasa dingin yang nikmat"</p>
-            </div>
-        </div>
-    
-        <div class="image_Product">
-            <img src="/images/Singkong Thai.jpg" class="product_img">
-            <div class="hover-box">
-                Bahan-bahan yang digunakan:<br>
-                1. Singkong<br>
-                2. Gula<br>
-                3. Vanila<br>
-                4. Santan<br>
-                5. Garam<br>
-                6. Air<br>
-                7. Tepung Kanji
-            </div>
-            <div class="image-info">
-                <h3 class="title">Singkong Thai</h3>
-                <p class="comment">"Makanan yang cocok sebagai makanan penutup. Singkong lembut dipadukan dengan<br>
-                santan memberikan rasa asin, manis, dan creamy."</p>
-            </div>
-        </div>
-    </div>
+        
     <div id="section_quarter_bottom" class="about">
         <div class="container">
             <h1>About Us</h1>

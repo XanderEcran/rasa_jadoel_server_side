@@ -76,6 +76,6 @@ exports.logout = (req, res) => {
             });
         }
         res.clearCookie('connect.sid');
-        return res.status(200).redirect('/login');
+        return res.status(200).redirect('/');
     });
 };

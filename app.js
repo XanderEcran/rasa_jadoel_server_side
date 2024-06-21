@@ -34,7 +34,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true } // Set secure: true in production when using HTTPS
+    cookie: { secure: true } 
 }));
 app.use(flash());
 
