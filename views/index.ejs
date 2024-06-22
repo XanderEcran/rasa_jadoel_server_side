@@ -37,11 +37,11 @@
         <% if(data.length){
             for(var i = 0; i < data.length; i++) {%>  
                 <div class="image_Product">
-                        <img src="/uploads/<%= data[i].gambar_produk %>" alt="<%= data[i].gambar_produk %>" style="width: 130px; height: auto;">
+                        <img src="/uploads/<%= data[i].gambar_produk %>" alt="<%= data[i].gambar_produk %>" style="width: 350px; height: auto; border-radius: 20px;" >
                         <div class="hover-box">
                             <%= data[i].resep %>
                         </div>
-                        <div class="image-info">
+                        <div class="image-info" style="margin-left: 25px;">
                         <h3 class="title"><%= data[i].nama_produk %></h3>
                         <p class="comment"><%= data[i].deskripsi %></p>
                         </div>

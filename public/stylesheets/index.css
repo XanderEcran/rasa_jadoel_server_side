@@ -144,7 +144,7 @@ header #navbar li a:hover {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -159,6 +159,7 @@ header #navbar li a:hover {
 .image_Product:hover .hover-box {
     opacity: 1;
 }
+
 
 #section_quarter_bottom {
     display: flex;
@@ -178,7 +179,7 @@ header #navbar li a:hover {
 }
 
 #section_quarter_bottom h1 {
-    text-align: left;
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
 }
