@@ -160,10 +160,9 @@ header #navbar li a:hover {
     opacity: 1;
 }
 
-
 #section_quarter_bottom {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     background-color: #ffff;
     padding: 100px 0;
     text-align: center;
@@ -213,6 +212,7 @@ header #navbar li a:hover {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .icon {
@@ -320,6 +320,20 @@ header #navbar li a:hover {
     #section_quarter_bottom h1 {
         text-align: center;
         margin-left: 0;
-        
+    }
+
+    #order {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+    }
+
+    #profil_insta img, 
+    #order .icon {
+        max-width: 100%;
+        width: 100%;
     }
 }
